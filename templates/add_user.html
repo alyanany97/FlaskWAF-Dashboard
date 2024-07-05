@@ -1,0 +1,17 @@
+<!-- templates/add_user.html -->
+{% extends "base.html" %}
+{% block title %}Add New User{% endblock %}
+{% block content %}
+    <h1>Add New User</h1>
+    <div class="card">
+        <form method="POST">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <label for="is_admin" style="margin-bottom: 15px;">
+                <input type="checkbox" id="is_admin" name="is_admin">
+                Admin
+            </label>
+            <button type="submit" class="btn">Add User</button>
+        </form>
+    </div>
+{% endblock %}

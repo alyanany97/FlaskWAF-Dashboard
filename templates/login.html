@@ -1,0 +1,15 @@
+<!-- templates/login.html -->
+{% extends "base.html" %}
+{% block title %}Login - WAF Management System{% endblock %}
+{% block content %}
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div class="card" style="width: 300px;">
+        <h2 style="text-align: center;">Login</h2>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="btn" style="width: 100%;">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

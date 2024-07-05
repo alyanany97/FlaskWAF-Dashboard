@@ -1,0 +1,17 @@
+<!-- templates/edit_user.html -->
+{% extends "base.html" %}
+{% block title %}Edit User{% endblock %}
+{% block content %}
+    <h1>Edit User</h1>
+    <div class="card">
+        <form method="POST">
+            <input type="text" id="username" name="username" value="{{ user.username }}" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="New Password (leave blank to keep current)">
+            <label for="is_admin" style="margin-bottom: 15px;">
+                <input type="checkbox" id="is_admin" name="is_admin" {% if user.is_admin %}checked{% endif %}>
+                Admin
+            </label>
+            <button type="submit" class="btn">Update User</button>
+        </form>
+    </div>
+{% endblock %}
